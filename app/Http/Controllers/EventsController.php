@@ -100,8 +100,14 @@ class EventsController extends BaseController
     ]
      */
 
+    /**
+     * getEventsWithWorkshops
+     *
+     * @return void
+     */
     public function getEventsWithWorkshops() {
-        throw new \Exception('implement in coding task 1');
+        $events = Event::with('workshops')->get();
+        return $events;
     }
 
 
